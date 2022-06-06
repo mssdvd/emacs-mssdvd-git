@@ -5,7 +5,7 @@
 # Contributor: Renchi Raju <renchi@green.tam.uiuc.edu>
 
 pkgname=emacs-mssdvd-git
-pkgver=29.0.50.157054
+pkgver=29.0.50.157066
 pkgrel=1
 pkgdesc='The extensible, customizable, self-documenting real-time display editor.'
 arch=('x86_64')
@@ -50,6 +50,7 @@ depends=(
 makedepends=(git)
 provides=(emacs)
 conflicts=(emacs)
+options=(debug !strip)
 source=("emacs-master::git+file//emacs-master")
 b2sums=('SKIP')
 
