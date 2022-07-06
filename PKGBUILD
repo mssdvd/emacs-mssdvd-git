@@ -3,9 +3,10 @@
 # Contributor: Frederik Schwan <freswa at archlinux dot org>
 # Contributor: Jaroslav Lichtblau <svetlemodry@archlinux.org>
 # Contributor: Renchi Raju <renchi@green.tam.uiuc.edu>
+# Contributor: Pedro A. López-Valencia
 
 pkgname=emacs-mssdvd-git
-pkgver=29.0.50.157066
+pkgver=29.0.50.157965
 pkgrel=1
 pkgdesc='The extensible, customizable, self-documenting real-time display editor.'
 arch=('x86_64')
@@ -59,7 +60,7 @@ pkgver() {
 
   printf "%s.%s" \
     "$(grep AC_INIT configure.ac | \
-    sed -e 's/^.\+\ \([0-9]\+\.[0-9]\+\.[0-9]\+\?\).\+$/\1/')" \
+    awk -F',' '{ gsub("[ \\[\\]]","",$2); print $2 }')" \
     "$(git rev-list --count HEAD)"
 }
 
