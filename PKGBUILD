@@ -6,7 +6,7 @@
 # Contributor: Pedro A. López-Valencia
 
 pkgname=emacs-mssdvd-git
-pkgver=29.0.50.157965
+pkgver=29.0.50.157994
 pkgrel=1
 pkgdesc='The extensible, customizable, self-documenting real-time display editor.'
 arch=('x86_64')
@@ -69,10 +69,6 @@ build() {
     --prefix=/usr \
     --libexecdir=/usr/lib \
     --localstatedir=/var \
-    --with-cairo \
-    --with-harfbuzz \
-    --with-libsystemd \
-    --with-modules \
     --with-pgtk \
     --with-native-compilation"
 
