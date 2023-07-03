@@ -49,6 +49,9 @@ depends=(
   libgccjit
 )
 makedepends=(git)
+optdepends=(
+    'mupdf-tools: render documents as SVG'
+)
 provides=(emacs)
 conflicts=(emacs)
 options=(debug !strip)
